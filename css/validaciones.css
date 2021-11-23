@@ -55,3 +55,6 @@ button {
 #btnCero{
   background-color: blue;
 }
+span, button{
+  cursor: pointer;
+}
