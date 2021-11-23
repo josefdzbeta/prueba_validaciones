@@ -13,12 +13,9 @@ window.onload = iniciar
 
 function iniciar(){
 
-    
     console.log('Cargado JS')
-    document.getElementById('spanMedia').onclick = calcularMedia()
-    document.getElementsByTagName('button').onclick = ponerCero()
-
-   
+    document.getElementById('spanMedia').onclick = calcularMedia
+    document.getElementById('btnCero').onclick = ponerCero
 
 }
 
@@ -26,26 +23,32 @@ function iniciar(){
 function calcularMedia(){
 
 
-    let num1, num2, num3, suma, media
+    let num1, num2, num3, suma = 0, media
 
     //Cogemos los values de los inputs
-    num1 = document.getElementById('iCalculo1').value
-    num2 = document.getElementById('iCalculo2').value
-    num3 = document.getElementById('iCalculo3').value
+    num1 = Number(document.getElementById('iCalculo3').value)
+    num2 = Number(document.getElementById('iCalculo3').value)
+    num3 = Number(document.getElementById('iCalculo3').value)
 
-    suma = Number(num1 + num2 + num3)
+    suma = num1 + num2 + num3
+
+    console.log('Suma: ' + suma)
 
     media = suma/3
 
-    console.log(media)
+    console.log('Media: ' + media)
 
 }
 
+//Poner los inputs tipo number a 0
 function ponerCero(){
 
-    
+    document.getElementById('iCalculo1').value = "0" 
+    document.getElementById('iCalculo2').value = "0"
+    document.getElementById('iCalculo3').value = "0"
 
 }
+
 
 
 
