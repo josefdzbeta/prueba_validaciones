@@ -17,6 +17,7 @@ function iniciar(){
     document.getElementById('spanMedia').onclick = calcularMedia
     document.getElementById('btnCero').onclick = ponerCero
     document.getElementById('sCurso').onchange = asignaturas
+    document.getElementById('enviar').onclick = enviarFormulario
     
 }
 
@@ -25,7 +26,7 @@ function calcularMedia(){
 
     
 
-    let num1, num2, num3, suma = 0, media
+    let num1, num2, num3, suma = 0, media = 0
 
     //Cogemos los values de los inputs
     num1 = Number(document.getElementById('iCalculo3').value)
@@ -55,6 +56,7 @@ function ponerCero(){
 
 }
 
+//Creamos el select dinamicamente 
 function asignaturas(){
 
     let p = document.getElementById('Clases');
@@ -82,4 +84,10 @@ function asignaturas(){
             selectList.appendChild(option);
         }
     }
+}
+
+function enviarFormulario(){
+
+    document.getElementsByTagName('form').reset()
+
 }

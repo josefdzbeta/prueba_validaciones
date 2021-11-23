@@ -16,7 +16,9 @@
   <h1>PRU-02.01 - Ejercicio 1</h1>
   <p>Ejercicio sobre Validaciones de Formularios</p>
 
-  <div id=divError></div>
+  <form>
+
+    <div id=divError></div>
   <p>
     <label for=iMatricula>Matrícula</label>
     <input type=text id=iMatricula pattern=^\d{4}-[A-Z]{3}|^CC-\d{4}-[A-Z]{2}|BA-\d{4}-[A-Z]/>
@@ -43,6 +45,8 @@
     <button type=button id=btnCero>Poner a Cero</button>
     <button id="enviar">Enviar</button>
   </p>
+  </form>
+  
 
   <script src=js/validaciones.js></script>
 </body>
